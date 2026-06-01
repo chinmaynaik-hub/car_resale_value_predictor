@@ -4,7 +4,7 @@
 
 This project predicts the resale value of used cars using Machine Learning techniques. The model is trained on the CarDekho Used Car Dataset and helps estimate a car's selling price based on various attributes such as brand, model, vehicle age, kilometers driven, fuel type, transmission type, and ownership history.
 
-The project compares multiple regression algorithms and deploys the best-performing model through an interactive Gradio web interface.
+The project compares multiple regression algorithms and deploys the best-performing model through an interactive Streamlit web interface.
 
 ---
 
@@ -96,17 +96,17 @@ Performance metrics used:
 A custom prediction function is created to estimate the selling price of a new car based on user inputs.
 
 ### 8. Deployment
-An interactive Gradio web application is developed for real-time price prediction.
+An interactive Streamlit web application is developed for real-time price prediction.
 
 ---
 
 ## 📊 Machine Learning Models
 
-| Model | Purpose |
-|---------|---------|
-| Linear Regression | Baseline Prediction |
-| KNN Regressor | Neighbor-Based Prediction |
-| XGBoost Regressor | High Accuracy Prediction |
+| Model | Purpose | R-square score | Mean squared error |
+|---------|---------|------------|--------|
+| Linear Regression | Baseline Prediction |0.79 |157511393693.23|
+| KNN Regressor | Neighbor-Based Prediction |0.90 | 76346473047.56
+| XGBoost Regressor | High Accuracy Prediction |0.94 | 42575114240.00
 
 ---
 
@@ -129,7 +129,10 @@ An interactive Gradio web application is developed for real-time price predictio
 
 ## 🚀 Running the Project
 
-### Install Required Libraries
+1. Install Required Libraries (for VS code)
 
 ```bash
 pip install pandas numpy matplotlib scikit-learn xgboost kagglehub
+```
+2. Add app.py file to Google colab root folder
+3. Click on Run all Button
